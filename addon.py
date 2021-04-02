@@ -1,9 +1,10 @@
 import os
 import xml.etree.ElementTree as et
-import urlparse
+from urllib.parse import urlparse
+from urllib.parse import parse_qs
+from html.parser import HTMLParser
 import sys
 import requests
-import HTMLParser
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
@@ -11,7 +12,7 @@ import xbmc
 import xbmcgui
 import xbmcaddon
 import xbmcplugin
-from resources.lib import skinpatch
+#from resources.lib import skinpatch
 
 plugin_url = sys.argv[0]
 handle = int(sys.argv[1])
@@ -42,7 +43,7 @@ class RadioSource():
 
     # Generate a Kodi list item from the radio source
     def list_item(self):
-        li = xbmcgui.ListItem(self.name, iconImage="DefaultAudio.png")
+        li = xbmcgui.ListItem(self.name)#, iconImage="DefaultAudio.png"
         li.setInfo("music", {"title": self.name,
                              "artist": self.info.get("tagline", None),
                              "genre": self.info.get("genre", None)
@@ -222,21 +223,21 @@ def urlencode(string):
 
 
 # Request permission from user to modify skin files
-def prompt_skinpatch():
-    if addon.getSetting("skin-patch-prompt") == "true":
-        if xbmcgui.Dialog().yesno(heading=addon.getAddonInfo("name"),
-                                  line1=addon.getLocalizedString(30003),
-                                  line2=addon.getLocalizedString(30004)):
-            addon.setSetting("skin-patch", "true")
-        addon.setSetting("skin-patch-prompt", "false")
-    # Patch skin to allow track info to be displayed
-    if addon.getSetting("skin-patch") == "true":
-        skinpatch.SkinPatch().autopatch()
+#def prompt_skinpatch():
+#    if addon.getSetting("skin-patch-prompt") == "true":
+#        if xbmcgui.Dialog().yesno(heading=addon.getAddonInfo("name"),
+#                                  line1=addon.getLocalizedString(30003),
+#                                  line2=addon.getLocalizedString(30004)):
+#            addon.setSetting("skin-patch", "true")
+#        addon.setSetting("skin-patch-prompt", "false")
+#    # Patch skin to allow track info to be displayed
+#    if addon.getSetting("skin-patch") == "true":
+#        skinpatch.SkinPatch().autopatch()
 
 
 # Extract URL parameters
 params = dict((key, value_list[0]) for key, value_list
-              in urlparse.parse_qs(sys.argv[2][1:]).items())
+              in parse_qs(sys.argv[2][1:]).items())
 
 # Load source filenames into list
 sources = []
@@ -248,14 +249,14 @@ for source in os.listdir(sources_path):
             sources.append(name)
 
 # Remove all skin patches
-if params.get("action", None) == "unpatch":
-    skinpatch.autoremove()
-    addon.setSetting("skin-patch", "false")
-    addon.setSetting("skin-patch-prompt", "true")
+#if params.get("action", None) == "unpatch":
+#    skinpatch.autoremove()
+#    addon.setSetting("skin-patch", "false")
+#    addon.setSetting("skin-patch-prompt", "true")
 else:
     # Run addon
     if params.get("source", None) is None:
         build_list()
     else:
-        prompt_skinpatch()
+        #prompt_skinpatch()
         RadioSource(params["source"]).play()

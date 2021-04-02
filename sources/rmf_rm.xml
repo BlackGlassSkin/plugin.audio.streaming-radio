@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <stream bitrate="320">http://195.150.20.7/rmf_fm</stream>
+    <stream bitrate="192">http://195.150.20.7/rmf_fm</stream>
+	<stream bitrate="128" />
+    <stream bitrate="64" />
+	<name>RMF FM</name>
+	<tagline>Radio,Muzyka,Fakty</tagline>
+	<description>.......</description>
+	<genre>Mix</genre>
+	<fanart>default_fanart.jpg</fanart>
+	<thumb>default_thumb.png</thumb>
+	<scraper type="tunein">
+		<url>https://www.rmfon.pl/stacje/playlista_5.json.txt</url>
+		<delay>20</delay>
+	</scraper>
+</source>

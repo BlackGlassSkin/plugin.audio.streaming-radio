@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.audio.streaming-radio" name="Streaming Radio" provider-name="Jonathan Holvey" version="1.5.5">
+<addon id="plugin.audio.streaming-radio" name="Streaming Radio" provider-name="Jonathan Holvey, Kim" version="1.6.5">
 	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.requests" version="2.9.1"/>
-		<import addon="script.module.beautifulsoup4" version="4.3.0"/>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+		<import addon="script.module.beautifulsoup4" version="4.9.3+matrix.1"/>
 	</requires>
 	<extension library="addon.py" point="xbmc.python.pluginsource">
 		<provides>audio</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_gb">Listen to custom radio streams with station fanart and on-screen track information</summary>
+        <summary lang="pl_pl">Słuchaj niestandardowych strumieni radiowych z informacjami o utworach</summary>
 		<description lang="en_gb"/>
 		<disclaimer lang="en_gb"/>
 		<language/>
@@ -22,58 +23,6 @@
 		<news>
 			v1.5.4 (2018-05-23)
 			- Fix tunein.com track info scraping, using BeautifulSoup for added robustness
-
-			v1.5.4 (2018-02-15)
-			- Update tunein.com track info scraper to work with new class name
-
-			v1.5.3 (2017-08-22)
-			- Update tunein.com track info scraper to work with new site layout
-			- Update Buddha Radio source with new branding
-
-			v1.5.2 (2017-08-19)
-			- Set embedded addon repository to communicate using HTTPS
-
-			v1.5.1 (2017-03-26)
-			- Bugfix: Prevent skin patch lockout when addon and skin have both been updated
-
-			v1.5.0 (2017-03-26)
-			- Bugfix: Prevented skins ending up in a partially patched state. Broken skins should be fixed by reinstalling
-			- Improveed skin patching so that line numbers don't need to match
-			- Redesigned addon icon for cleaner (less confusing) look
-
-			v1.4.2 (2017-01-09)
-			- Bugfix: Removed conflict which prevented live TV show title from being displayed in Xperience1080 OSD
-			
-			v1.4.1 (2017-01-26)
-			- Fixed compatibility with Python 2.6 for Android devices
-			
-			v1.4.0 (2016-12-29)
-			- Changed skin patching so that modifications aren't removed after playback stops
-			- Enabled auto-updating using embedded repository extension point
-			- Bug fixes and tidy-up
-
-			v1.3.0 (2016-11-19)
-			- Added sorting methods and improved default sorting
-			- Removed unintentional maximum bitrate restriction
-
-			v1.2.2 (2016-11-07)
-			- Added support for Kodi 17
-			- Bug fixes
-
-			v1.2.1 (2016-10-29)
-			- Added licence
-
-			v1.2.0 (2016-10-29)
-			- Split radio sources into separate XML files
-			- Added module for patching skins, to enable the display of track information
-			- Added display of now playing track information from Tunein.com and last.fm
-
-			v1.1.1 (2016-09-18)
-			- Bugfix: Added default value for maximum bitrate setting to prevent error if not set
-
-			v1.1.0 (2016.09.17)
-			- Prevented users' customisations in sources.xml from being overwritten by updates
-
 			v1.0.0 (2016-09-17)
 			- Initial release
 		</news>
