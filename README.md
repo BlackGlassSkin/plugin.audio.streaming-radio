@@ -1,5 +1,7 @@
 # A custom internet radio addon for Kodi
 
+# Skin patch support "removed"
+
 This addon allows you to specify custom internet radio streams and add artwork to them. In addition, it can find out information about a track that's being played, and display information about it in Kodi's OSD (with supported skins). This provides a far nicer interface for custom radio streams than scanning .strm files into the Kodi library, as recommended in the [Kodi wiki](http://kodi.wiki/view/internet_video_and_audio_streams).
 
 ![Buddha Radio][screenshot]  
@@ -72,8 +74,7 @@ Stations can also be sorted by name only (ignoring `sort`) and by genre, using t
 4. ~~Apply a delay to the track info change to sync it with the audio (Tunein updates \~20 seconds before the track changes)~~ *Done*
 5. ~~Show more track information in the OSD~~ *Done*
 6. ~~Automatically apply skin patch on first run~~ *Done*
-7. Add support for other skins - pull requests welcome
-8. Show track progress and end time in the OSD
+7. ~~Add support for other skins - pull requests welcome~~
 
 ## Licence
 
