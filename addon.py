@@ -206,10 +206,11 @@ def build_list():
     for source in source_list:
         li = source.list_item()
         xbmcplugin.addDirectoryItem(handle=handle, url=source.url, listitem=li, isFolder=False)
-
+    xbmcplugin.setContent(int(sys.argv[1]), 'albums')
     xbmcplugin.addSortMethod(handle, xbmcplugin.SORT_METHOD_UNSORTED)
     xbmcplugin.addSortMethod(handle, xbmcplugin.SORT_METHOD_TITLE)
     xbmcplugin.addSortMethod(handle, xbmcplugin.SORT_METHOD_GENRE)
+    xbmcplugin.addSortMethod(handle, xbmcplugin.SORT_METHOD_LASTPLAYED)
     xbmcplugin.endOfDirectory(handle)
 
 
@@ -246,6 +247,7 @@ for source in os.listdir(sources_path):
     if os.path.isfile(source_file):
         name, extension = os.path.splitext(source)
         if extension == ".xml":
+        #if extension == ".strm":
             sources.append(name)
 
 # Remove all skin patches

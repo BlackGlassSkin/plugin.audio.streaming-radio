@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <stream bitrate="320">https://an02.cdn.eurozet.pl/ANTBAL.mp3</stream>
+    <stream bitrate="192">https://an02.cdn.eurozet.pl/ANTBAL.mp3</stream>
+	<stream bitrate="128" />
+    <stream bitrate="64" />
+	<name>Antyradio Ballads</name>
+	<tagline>Ponadczasowe ballady rockowe</tagline>
+	<description>Ponadczasowe ballady rockowe największych artystów wszechczasów. Muzyka, która nigdy nie wyjdzie z mody, melodie przy których dzieje się magia.</description>
+	<genre>Rock Soft • Rock • Balada</genre>
+	<fanart>default_fanart.jpg</fanart>
+	<thumb>default_thumb.png</thumb>
+	<scraper type="tunein">
+		<url>https://tunein.com/radio/Anty-Radio-940-s9608/</url>
+		<delay>20</delay>
+	</scraper>
+</source>

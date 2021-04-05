@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <stream bitrate="320">https://an03.cdn.eurozet.pl/ant-waw.mp3</stream>
+    <stream bitrate="192">https://n-22-12.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx</stream>
+	<stream bitrate="128" />
+    <stream bitrate="64" />
+	<name>Anty Radio</name>
+	<tagline>Rockowo Bezkompromisowi</tagline>
+	<description>.......</description>
+	<genre>Rock</genre>
+	<fanart>default_fanart.jpg</fanart>
+	<thumb>default_thumb.png</thumb>
+	<scraper type="tunein">
+		<url>https://tunein.com/radio/Anty-Radio-940-s9608/</url>
+		<delay>20</delay>
+	</scraper>
+</source>

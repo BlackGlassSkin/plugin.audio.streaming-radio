@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <stream bitrate="320">https://an02.cdn.eurozet.pl/ANTCLA.mp3</stream>
+    <stream bitrate="192">https://an02.cdn.eurozet.pl/ANTCLA.mp3</stream>
+	<stream bitrate="128" />
+    <stream bitrate="64" />
+	<name>Antyradio Classic Rock</name>
+	<tagline>Radio,Muzyka,Fakty</tagline>
+	<description>.......</description>
+	<genre>Classic Rock</genre>
+	<fanart>default_fanart.jpg</fanart>
+	<thumb>default_thumb.png</thumb>
+	<scraper type="tunein">
+		<url>https://www.txt</url>
+		<delay>20</delay>
+	</scraper>
+</source>
