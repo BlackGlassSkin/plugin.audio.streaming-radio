@@ -187,7 +187,8 @@ class RadioInfo():
     def _update_tunein(self):
         try:
             html = BeautifulSoup(requests.get(self.scraper["url"]).text, "html.parser")
-            match = html.select("p.guide-item__guideItemSubtitle___2hQxF")
+            #match = html.select("p.guide-item__guideItemSubtitle___2hQxF")
+            match = html.select("guide-item__guideItemSubtitle___2hQxF")
 
             if len(match) > 0 and " - " in match[0].string:
                 self.info["artist"], self.info["title"] = match[0].string.split(" - ")
