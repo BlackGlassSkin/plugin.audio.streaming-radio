@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <stream bitrate="320">https://tx.planetradio.co.uk/http_live_bauer.php?i=planetrock.aac</stream>
+    <stream bitrate="192">http://195.150.20.7/rmf_fm</stream>
+	<stream bitrate="128" />
+    <stream bitrate="64" />
+	<name>Planet Rock</name>
+	<tagline>Sports, music, news and podcasts. Hear the audio that matters most to you.</tagline>
+	<description>.......</description>
+	<genre>Mix</genre>
+	<fanart>default_fanart.jpg</fanart>
+	<thumb>default_thumb.png</thumb>
+	<scraper type="tunein">
+		<url>https://tunein.com/radio/Planet-Rock-s2377/</url>
+		<delay>20</delay>
+	</scraper>
+</source>

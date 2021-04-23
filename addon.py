@@ -17,6 +17,7 @@ import xbmcplugin
 plugin_url = sys.argv[0]
 handle = int(sys.argv[1])
 addon = xbmcaddon.Addon()
+addon_handle = int(sys.argv[1])
 
 sources_path = os.path.join(addon.getAddonInfo("path"), "sources")
 
@@ -187,7 +188,6 @@ class RadioInfo():
     def _update_tunein(self):
         try:
             html = BeautifulSoup(requests.get(self.scraper["url"]).text, "html.parser")
-            #match = html.select("p.guide-item__guideItemSubtitle___2hQxF")
             match = html.select("guide-item__guideItemSubtitle___2hQxF")
 
             if len(match) > 0 and " - " in match[0].string:

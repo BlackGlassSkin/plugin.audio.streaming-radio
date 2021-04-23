@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <stream bitrate="320">http://81.136.155.183:8000/45Radio320kmp3</stream>
+    <stream bitrate="192" />
+	<stream bitrate="128" />
+    <stream bitrate="64" />
+	<name>45 Radio</name>
+	<tagline>Small-scale DAB+ - Various Locations</tagline>
+	<description>.......</description>
+	<genre>A.C., Oldies</genre>
+	<fanart>default_fanart.jpg</fanart>
+	<thumb>default_thumb.png</thumb>
+	<scraper type="tunein">
+		<url>https://tunein.com/radio/Planet-Rock-s2377/</url>
+		<delay>20</delay>
+	</scraper>
+</source>

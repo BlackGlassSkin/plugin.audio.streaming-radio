@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <source>
-    <stream bitrate="320">https://n-4-4.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx</stream>
-    <stream bitrate="192"></stream>
+    <stream bitrate="320">http://edge-bauerabsolute-14-gos1.sharp-stream.com/absoluteradio.mp3</stream>
+    <stream bitrate="192">http://edge-bauerabsolute-14-gos1.sharp-stream.com/absoluteradio.mp3</stream>
 	<stream bitrate="128" />
     <stream bitrate="64" />
-	<name>Anty Radio</name>
-	<tagline>Rockowo Bezkompromisowi</tagline>
+	<name>Absolute Radio (UK DAB)</name>
+	<tagline>DAB - Various Locations</tagline>
 	<description>.......</description>
-	<genre>Rock</genre>
+	<genre>Contemporary Rock</genre>
 	<fanart>default_fanart.jpg</fanart>
 	<thumb>default_thumb.png</thumb>
 	<scraper type="tunein">
